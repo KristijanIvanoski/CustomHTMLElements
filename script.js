@@ -1,25 +1,25 @@
 class KristijanHelloElement extends HTMLElement {
-	static get observedAttributes() {
-		return ['name'];
-	}
+  static get observedAttributes() {
+    return ['name'];
+  }
 
-	constructor() {
-		super();
-	}
+  constructor() {
+    super();
+  }
 
-	attributeChangedCallback(name, oldValue, newValue) {
-		this.sayHi();
-	}
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.sayHi();
+  }
 
-	sayHi = () => {
-		this.innerText = "Hi " + this.attributes.getNamedItem("name")?.value;
-	}
+  sayHi = () => {
+    this.innerText = "Hi " + this.attributes.getNamedItem("name")?.value;
+  }
 }
 
 customElements.define('kristijan-hello', KristijanHelloElement);
 
 const changeName = (e) => {
-	document.querySelectorAll('kristijan-hello')?.forEach(element =>
-		element.setAttribute('name', e.target.value)
-	);
+  document.querySelectorAll('kristijan-hello')?.forEach(element =>
+    element.setAttribute('name', e.target.value)
+  );
 }

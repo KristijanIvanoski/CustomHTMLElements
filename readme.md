@@ -1,5 +1,8 @@
 # How to define custom dom element
 
+## You can test it [here](https://kristijanivanoski.github.io/CustomHTMLElements/)
+
+## Code
 ```js
 class KristijanHelloElement extends HTMLElement {
   static get observedAttributes() {

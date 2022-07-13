@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Custom HTML Elements</title>
+	<script src="./script.js"></script>
+	<style>
+		body > * {
+			display: block;
+			margin-bottom: 1em;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		Name: <input type="text" name="name" id="name" onchange="changeName(event)"
+		value="Kristijan"/>
+	</div>
+
+	<kristijan-hello name="Kristijan"></kristijan-hello>
+</body>
+</html>
